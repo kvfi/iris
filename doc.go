@@ -328,7 +328,7 @@ Example code:
       // when 404 then render the template $templatedir/errors/404.html
       // *read below for information about the view engine.*
       app.OnError(iris.StatusNotFound, func(ctx *iris.Context){
-        ctx.RenderWithstatus(iris.StatusNotFound, "errors/404.html", nil)
+        ctx.RenderWithStatus(iris.StatusNotFound, "errors/404.html", nil)
       })
 
       app.OnError(500, func(ctx *iris.Context){
